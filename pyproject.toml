@@ -1,0 +1,57 @@
+[project]
+name = "fundamental-technical"
+version = "0.1.0"
+description = "US equity investing: fundamental sets direction, technical sets entry/exit"
+requires-python = ">=3.11"
+dependencies = [
+    "compdata>=0.0.1",
+    "edgartools>=5.16.1",
+    "financetoolkit>=2.0.6",
+    "fredapi>=0.5.2",
+    "numpy>=1.26",
+    "pandas>=3.0.1",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.31.0",
+    "yfinance>=1.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pandas-stubs>=3.0.0.260204",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.15.1",
+    "types-PyYAML>=6.0.12",
+    "types-requests>=2.31.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: tests that call live APIs (deselect with '-m not integration')",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+mypy_path = "."
+
+[[tool.mypy.overrides]]
+module = [
+    "compdata.*",
+    "financetoolkit.*",
+    "edgar.*",
+    "yfinance.*",
+    "fredapi.*",
+]
+ignore_missing_imports = true

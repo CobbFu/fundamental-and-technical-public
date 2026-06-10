@@ -1,0 +1,79 @@
+version: 1
+updated: '2026-05-13'
+entries:
+- ticker: WDC
+  state: held
+  added: '2026-03-15'
+  thesis:
+    cascade: AI Infra (storage tier)
+    summary: Memory cyclical riding the AI capex wave; flagged by scans near $500.
+    conviction: medium
+    time_horizon: 6-18m
+    target_size_pct: 5.0
+    what_would_change_my_mind: |
+      Weekly RSI > 80 with daily distribution + close below 50-EMA.
+  plan:
+    entry_trigger: Pullback to 20-EMA + RSI cooling to 50 + reversal candle.
+    stop_loss: 366
+    add_zones: [429, 366]
+    trim_zones: []
+  alerts:
+  - {price: 429, type: crossing, note: 20-EMA touch / add zone, set_in_tv: false}
+  - {price: 508, type: crossing, note: above rejection high, set_in_tv: false}
+  - {price: 366, type: crossing, note: 50-EMA break / exit, set_in_tv: false}
+  last_refresh:
+    ts: '2026-05-12T16:00:00'
+    verdict: hold
+    previous_verdict: null
+    verdict_changed: true
+    flags: []
+    daily:
+      timeframe: '1D'
+      price: 480.00
+      ema: {20: 425.0, 50: 360.0, 200: 230.0}
+      rsi: 65.0
+      macd: {line: 40.0, signal: 35.0, hist: 5.0}
+      bb: {upper: 510.0, basis: 420.0, lower: 330.0}
+    weekly:
+      timeframe: '1W'
+      price: 480.00
+      ema: {20: 320.0, 50: 220.0, 200: 105.0}
+      rsi: 78.0
+      macd: {line: 70.0, signal: 55.0, hist: 15.0}
+      bb: {upper: 470.0, basis: 305.0, lower: 135.0}
+    notes: Prior baseline read.
+- ticker: NBIS
+  state: watching
+  added: '2026-05-13'
+  thesis:
+    cascade: AI Infra (compute)
+    summary: Reflexive AI infra name; entry on pullback.
+    conviction: low
+    time_horizon: tactical
+    target_size_pct: 2.0
+    what_would_change_my_mind: |
+      Stack break + close below 50-EMA on heavy volume.
+  plan:
+    entry_trigger: Pullback to 20-EMA + RSI cooling to 50.
+    stop_loss: 140
+    add_zones: [162, 140]
+    trim_zones: []
+  alerts:
+  - {price: 162, type: crossing, note: 20-EMA touch, set_in_tv: false}
+- ticker: AMD
+  state: held
+  added: '2026-04-01'
+  thesis:
+    cascade: AI Infra (GPU alt)
+    summary: AI accelerator option play.
+    conviction: medium
+    time_horizon: 6-18m
+    target_size_pct: 5.0
+    what_would_change_my_mind: |
+      Datacenter rev miss two quarters in a row.
+  plan:
+    entry_trigger: Held position; manage on the chart.
+    stop_loss: 130
+    add_zones: []
+    trim_zones: [220]
+  alerts: []

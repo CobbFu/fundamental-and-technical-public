@@ -1,0 +1,64 @@
+[
+  {
+    "ticker": "WDC",
+    "ts": "2026-05-13T11:30:00",
+    "daily": {
+      "timeframe": "1D",
+      "price": 488.74,
+      "ema": {"20": 429.18, "50": 366.02, "200": 234.69},
+      "rsi": 70.18,
+      "macd": {"line": 43.19, "signal": 37.93, "hist": 5.26},
+      "bb": {"upper": 513.68, "basis": 423.16, "lower": 332.63}
+    },
+    "weekly": {
+      "timeframe": "1W",
+      "price": 488.74,
+      "ema": {"20": 322.73, "50": 223.73, "200": 106.21},
+      "rsi": 87.43,
+      "rsi_ma": 80.03,
+      "macd": {"line": 75.67, "signal": 58.26, "hist": 17.42},
+      "bb": {"upper": 475.69, "basis": 306.34, "lower": 136.99}
+    },
+    "notes": "Weekly trifecta firing; intraday rejection from $508."
+  },
+  {
+    "ticker": "NBIS",
+    "ts": "2026-05-13T11:30:00",
+    "daily": {
+      "timeframe": "1D",
+      "price": 179.11,
+      "ema": {"20": 162.43, "50": 140.76, "200": 104.33},
+      "rsi": 61.33,
+      "macd": {"line": 14.12, "signal": 12.64, "hist": 1.48},
+      "bb": {"upper": 195.95, "basis": 162.71, "lower": 129.47}
+    },
+    "weekly": {
+      "timeframe": "1W",
+      "price": 179.11,
+      "ema": {"20": 145.0, "50": 110.0, "200": 60.0},
+      "rsi": 68.0,
+      "macd": {"line": 25.0, "signal": 22.0, "hist": 3.0},
+      "bb": {"upper": 200.0, "basis": 145.0, "lower": 90.0}
+    }
+  },
+  {
+    "ticker": "AMD",
+    "ts": "2026-05-13T11:30:00",
+    "daily": {
+      "timeframe": "1D",
+      "price": 165.0,
+      "ema": {"20": 160.0, "50": 150.0, "200": 140.0},
+      "rsi": 58.0,
+      "macd": {"line": 1.5, "signal": 1.2, "hist": 0.3},
+      "bb": {"upper": 175.0, "basis": 162.0, "lower": 149.0}
+    },
+    "weekly": {
+      "timeframe": "1W",
+      "price": 165.0,
+      "ema": {"20": 155.0, "50": 145.0, "200": 130.0},
+      "rsi": 56.0,
+      "macd": {"line": 3.0, "signal": 2.5, "hist": 0.5},
+      "bb": {"upper": 180.0, "basis": 160.0, "lower": 140.0}
+    }
+  }
+]

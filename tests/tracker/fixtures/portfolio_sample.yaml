@@ -1,0 +1,68 @@
+version: 2
+base_currency: GBP
+benchmark: URTH
+updated: '2026-01-02'
+accounts:
+  isa1:
+    name: "ISA - Broker A"
+    cash_gbp: 1000.0
+  isa2:
+    name: "ISA - Broker B"
+    cash_gbp: 500.0
+  investment:
+    name: Investment Account
+    cash_gbp: 2000.0
+positions:
+- ticker: WDC
+  yf_ticker: WDC
+  company: Western Digital
+  currency: USD
+  thesis_status: active
+  holdings:
+  - account: isa2
+    shares: 10
+    book_cost_local: 4500.00
+    book_cost_gbp: 3375
+    avg_fx_rate: 0.75
+- ticker: INVE-B
+  yf_ticker: INVE-B.ST
+  company: Investor AB
+  currency: SEK
+  thesis_status: active
+  holdings:
+  - account: isa1
+    shares: 1000
+    book_cost_local: 300000.00
+    book_cost_gbp: 22000
+    avg_fx_rate: 0.075
+  - account: investment
+    shares: 500
+    book_cost_local: 150000.00
+    book_cost_gbp: 11000
+    avg_fx_rate: 0.075
+- ticker: VUAG
+  yf_ticker: VUAG.L
+  company: Vanguard S&P 500 UCITS ETF
+  currency: GBP
+  thesis_status: active
+  holdings:
+  - account: isa1
+    shares: 50
+    book_cost_gbp: 5000
+- ticker: ZERO
+  yf_ticker: ZERO
+  company: Zero-share placeholder
+  currency: USD
+  thesis_status: exited
+  holdings:
+  - account: isa1
+    shares: 0
+    book_cost_local: 0
+    book_cost_gbp: 0
+fx_pairs:
+  USD: USDGBP=X
+position_rules:
+  max_entry_pct: 5.0
+  trim_warning_pct: 12.0
+  hard_ceiling_pct: 15.0
+  ideal_position_count: 30-40

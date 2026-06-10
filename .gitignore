@@ -1,0 +1,32 @@
+# Secrets
+.env
+
+# Python tooling
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# OS
+**/.DS_Store
+
+# Claude harness state — keep only the two project-owned wiki skills
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/wiki-ingest/
+!.claude/skills/ask-wiki/
+
+# Local runtime state (created on first use) — never commit your own book
+.valuation/
+output/
+.tmp_refresh/
+
+# Large / copyrighted source corpus staged for the wiki — keep local only
+*.pdf
+*.epub
+llm-wiki/raw/processed/**
+!llm-wiki/raw/processed/Buffett-1965-Partnership-Letter-seed.md
